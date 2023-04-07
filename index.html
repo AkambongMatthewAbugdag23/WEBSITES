@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="index.css">
+        <title>PROJECT ALPHA</title>
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo"><img src="bus.jpg"/>SOLVEITECH</a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#P.APP">P.APP</a></li>
+                    <li><a href="#APP 2">APP 2</a></li>
+                    <li><a href="#APP 3">APP 3</a></li>
+                    <li><a href="#APP 4">APP 4</a></li>
+                    <li><a href="#APP 5">APP 5</a></li>
+                    <li><a href="#APP 6">APP 6</a></li>
+                    <li><a href="#APP 7">APP 7</a></li>
+                    <li><a href="#APP 8">APP 8</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>MY PASSENGER APP</h1>
+        <p id="welcome-el"></p>
+        <p class="intro">You are welcome to my passenger app to count and save the various sets
+            of people who enter my bus.
+        </p>
+        <div class="count">
+            <h2>People entered</h2>
+            <h2 id="count-el">0</h2>
+            <button id="increment-btn" onclick="increment()">INCREMENT</button>
+            <button id="save-btn" onclick="save()">SAVE</button>
+            <p id="save-el">Previous Entries: </p>
+            <button id="total-btn" onclick="updateTotal()">TOTAL</button>
+            <p id="total-el">Number of Passengers: </p>
+            
+        </div>
+        <div class="checklist">
+            <h2>MY checklist</h2>
+            <li><s style="color:red;">connect to microsoft excel</s></li>
+            <li><s style="color:red;">write out a formula to sum up and record values</s></li>
+        </div>
+        <div class="contact" style="background-color:grey;width:50%;height:auto;margin-left:25%; margin-top:25px;">
+            <form name="submit-to-google-sheet">
+                <h3 style="color:white; font-weight:bold;">Get in Touch</h3>
+                <input name="name" placeholder="Enter your name"></input>
+                <input name="email" placeholder="Email"></input>
+                <input name="contact" placeholder="phone Number" type="numbers"></input>
+
+                <button name="submit"style="background-color:green; margin-top:15px;width:15%;height:auto;font-weight:bolder;">SUBMIT</button>
+                <span id="success"></span>
+            </form>
+        
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycby_7MS-T7Ou8c83ENszNLJ0jx2H1UQT3Wn-wYpj7ZTPvpH06HLjSF6jU6hodoN7zQS1_A/exec'
+                const form = document.forms['submit-to-google-sheet']
+                const success= document.getElementById("success");
+                form.addEventListener('submit', e => {
+                  e.preventDefault()
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        success.innerHTML="SUBMITTED";
+                        setTimeout(function()
+                        {
+                            success.innerHTML="";
+                        },1000)
+                        form.reset();
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+              </script>
+        </div>
+        
+        <script src="index.js"></script>
+    </body>
+</html>
