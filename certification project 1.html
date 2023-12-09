@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description"> This is a survey form created by <strong>Akambong Matthew Abugdag</strong> for my freecodecamp.org certification.</p>
+    <fieldset>
+      <legend>Fill in your Details.</legend>
+      <form method="post" action="matthew.abugdag23@gmail.com"class="strong"id="survey-form">
+      <label id="name-label">Full Name:<input id="name" type="text" placeholder="input your name" required/></label>
+      <label id="email-label">Email Address:<input id="email" type="email" placeholder="input your email" required/></label>
+      <label id="number-label">Folio Number: <input id="number" type="number" placeholder="folio" min="3" max="8" required/></label>
+      <select id="dropdown">
+        <option value="">(Select an option)</option>
+        <option value="1">Primary</option>
+        <option value="2">Junior High</option>
+      </select> Select your Gender
+      Male <input class="inline" id="name" name="gender" type="radio" value="1" checked/>
+       Female <input class="inline" id="name" name="gender" type="radio" value="2"/>
+       <hr>
+       <h5>Game Choices</h5>
+        <label for="football">Football<input type="checkbox" value="1"/></label>
+        <label for="volleyball">Volleyball<input type="checkbox" value="2"/></label>
+        <label for="tennis">Tennis<input type="checkbox" value="3"/></label>
+      
+        <textarea></textarea>
+        <button id="submit" value="Submit">SUBMIT</button>
+    </form>
+  </body>
+</html>
