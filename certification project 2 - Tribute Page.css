@@ -1,0 +1,70 @@
+#image {
+    max-width:100%;
+    height:auto;
+    justify-content:center;
+  }
+  img {
+    display:block;
+    margin:auto;
+  }
+  #img-caption {
+  }
+  #img-div{
+    background-color:white;
+    width:100vw;
+    justify-content:center;
+    text-align:center;
+    margin-bottom:10px;
+  }
+  .topic {
+    background-color:gray;
+    font-family:sans-serff,Tahoma;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 5px;
+  
+  }
+  #main{
+    background-color:white;
+  }
+  #tribute-info {
+    padding-top:10px;
+    
+    
+  }
+  li{
+    width:40%;
+    margin-left:30%;
+    margin-right:30%;
+    padding-bottom:12px;
+  }
+  h1 {
+    font-size:30px;
+  }
+  .p-topic{
+    font-size:15px;
+    padding-bottom:20px;
+  }
+  h2 {
+    font-size: 16px;
+    text-align:center;
+    padding-bottom:15px;
+  }
+  .year {
+    font-weight:bold;
+  }
+  .p-quote {
+    width:450px;
+    text-align: center;
+    margin:auto;
+  }
+  cite{
+    text-align:center;
+  }
+  #foot {
+    font-weight:bold;
+    text-align:center;
+  }
+  a {
+    color:blue;
+  }
